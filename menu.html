@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>المنيو | رند</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap">
+<style>
+  body { margin: 0; font-family: 'Tajawal', sans-serif; background: #F8EEDC; color: #3B2414; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { opacity: 0.8; }
+  .ck { font-family: 'Tajawal', sans-serif; font-size: 13px; letter-spacing: 3px; font-weight: 700; color: #C8972E; text-transform: uppercase; }
+  .disp { font-family: 'El Messiri', serif; }
+  .catrow { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; }
+  .catimg { width: 68px; height: 68px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 20px rgba(59,36,20,0.18); flex-shrink: 0; }
+  .item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; }
+  .item-card { background: #FFFDF8; border-radius: 10px; padding: 20px 22px; box-shadow: 0 6px 18px rgba(59,36,20,0.08); display: flex; flex-direction: column; gap: 6px; }
+  .item-card h3 { margin: 0; font-size: 16.5px; color: #3B2414; font-weight: 700; }
+  .item-card p { margin: 0; font-size: 13.5px; color: #6B4A32; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden;">
+
+  <!-- HEADER -->
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 48px; background: #FBF3E3; box-shadow: 0 2px 14px rgba(59,36,20,0.08);">
+    <img src="assets/logo.png" alt="رند" style="height: 44px; width: auto;">
+    <nav style="display: flex; align-items: center; gap: 34px;">
+      <a href="index.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">الرئيسية</a>
+      <a href="menu.html" style="color: #3B2414; font-size: 15px; font-weight: 700;">المنيو</a>
+      <a href="index.html#story" style="color: #3B2414; font-size: 15px; font-weight: 500;">قصتنا</a>
+      <a href="branches.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">فروعنا</a>
+      <a href="https://wa.me/966570702728" style="display: flex; align-items: center; gap: 8px; background: #C8972E; color: #2A160B; padding: 10px 22px; border-radius: 4px; font-size: 14px; font-weight: 700;">
+        اطلب الآن
+      </a>
+    </nav>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section style="padding: 90px 48px 64px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+    <span class="ck">OUR MENU</span>
+    <h1 class="disp" style="margin: 0; font-size: 48px; color: #3B2414; font-weight: 700;">المنيو</h1>
+    <p style="margin: 0; font-size: 16px; color: #5A3B26; max-width: 560px; line-height: 1.8;">تشكيلتنا الكاملة من الكنافة والحلويات الشرقية. للأسعار وتفاصيل الطلب، تواصلوا معنا مباشرة عبر واتساب.</p>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section style="padding: 0 48px 60px;">
+    <div style="max-width: 980px; margin: 0 auto; display: flex; flex-direction: column;">
+
+      <!-- 1 -->
+      <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
+        <div class="catrow">
+          <img class="catimg" src="assets/kunafa-plain.jpg" alt="كنافة سيجنتشر وأسبيشل">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كنافة سيجنتشر وأسبيشل</h2>
+        </div>
+        <div class="item-grid">
+          <div class="item-card"><h3>سيجنتشر</h3><p>الوصفة الأصلية المقرمشة بنكهة السمن البلدي الأصيل</p></div>
+          <div class="item-card"><h3>أسبيشل</h3><p>نسخة مطوّرة بلمسة قشطة إضافية</p></div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
+        <div class="catrow">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كنافة أخرى</h2>
+        </div>
+        <div class="item-grid">
+          <div class="item-card"><h3>كنافة كوب</h3><p>كنافة فردية بتقديم أنيق داخل كوب</p></div>
+          <div class="item-card"><h3>كنافة ميني</h3><p>قطعة صغيرة مثالية لتجربة سريعة</p></div>
+          <div class="item-card"><h3>كنافة ميني (6 حبات)</h3><p>تشكيلة من 6 قطع، مثالية للمشاركة</p></div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
+        <div class="catrow">
+          <img class="catimg" src="assets/hero-kunafa.jpg" alt="كنافة حشوات">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كنافة حشوات</h2>
+        </div>
+        <div class="item-grid">
+          <div class="item-card"><h3>قشطة</h3><p>محشوة بالقشطة الطازجة</p></div>
+          <div class="item-card"><h3>لوتس</h3><p>بحشوة اللوتس الغنية</p></div>
+          <div class="item-card"><h3>نوتيلا</h3><p>بحشوة النوتيلا الكريمية</p></div>
+          <div class="item-card"><h3>بستاشيو</h3><p>بحشوة البستاشيو الفاخرة</p></div>
+          <div class="item-card"><h3>كندر</h3><p>بحشوة شوكولاتة كيندر</p></div>
+          <div class="item-card"><h3>مكس صوصات</h3><p>بتعرّجات من كل الصوصات معًا</p></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
+        <div class="catrow">
+          <img class="catimg" src="assets/khaliyet-nahl.jpg" alt="خلية نحل">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">خلية نحل</h2>
+        </div>
+        <div class="item-grid">
+          <div class="item-card"><h3>نستله</h3><p>محشوة بكريمة نستله</p></div>
+          <div class="item-card"><h3>بيكان</h3><p>بالبيكان المحمّص الذهبي</p></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
+        <div class="catrow">
+          <img class="catimg" src="assets/balah-el-sham.jpg" alt="بلح الشام">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">بلح الشام</h2>
+        </div>
+        <div class="item-grid">
+          <div class="item-card"><h3>قشطة</h3><p>بحشوة القشطة الطازجة</p></div>
+          <div class="item-card"><h3>لوتس</h3><p>بحشوة اللوتس</p></div>
+          <div class="item-card"><h3>نوتيلا</h3><p>بحشوة النوتيلا</p></div>
+          <div class="item-card"><h3>بستاشيو</h3><p>بحشوة البستاشيو</p></div>
+          <div class="item-card"><h3>مكس</h3><p>بمزيج من الحشوات المفضلة</p></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
+        <div class="catrow">
+          <img class="catimg" src="assets/basbousa.jpg" alt="بسبوسة">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">بسبوسة</h2>
+        </div>
+        <div class="item-grid">
+          <div class="item-card"><h3>قشطة</h3><p>بسبوسة طرية محشوة بالقشطة</p></div>
+          <div class="item-card"><h3>سكي</h3><p>بنكهة سكي المميزة</p></div>
+          <div class="item-card"><h3>كندر</h3><p>بطعم شوكولاتة كيندر</p></div>
+          <div class="item-card"><h3>لوتس</h3><p>بطبقة لوتس غنية</p></div>
+          <div class="item-card"><h3>بستاشيو</h3><p>بالبستاشيو الفاخر</p></div>
+          <div class="item-card"><h3>سينابون</h3><p>بنكهة القرفة الدافئة</p></div>
+          <div class="item-card"><h3>شعرية</h3><p>بقوام الشعرية المقرمش</p></div>
+          <div class="item-card"><h3>نستله</h3><p>بكريمة نستله</p></div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div style="padding: 44px 0;">
+        <div class="catrow">
+          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">بسبوسة يمنية</h2>
+        </div>
+        <div class="item-card" style="max-width: 560px;">
+          <p>متوفرة بأحجام متعددة تناسب الفرد أو العائلة، بالإضافة إلى صينية كبيرة تكفي للتجمعات والمناسبات.</p>
+          <a href="catering.html" style="color: #C8972E; font-size: 14px; font-weight: 700; margin-top: 6px;">لطلبات الصواني الكبيرة والمناسبات ←</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORDER NOTE -->
+  <section style="padding: 80px 48px; background: #2A160B; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center;">
+    <h2 class="disp" style="margin: 0; font-size: 32px; color: #FDF8EE; font-weight: 700;">جاهز للطلب؟</h2>
+    <p style="margin: 0; font-size: 15px; color: #E3C98B; max-width: 440px; line-height: 1.8;">تواصلوا معنا مباشرة عبر واتساب للأسعار وتفاصيل الطلب والتوصيل.</p>
+    <a href="https://wa.me/966570702728" style="background: #C8972E; color: #2A160B; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700;">اطلب عبر واتساب</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding: 36px 48px; background: #1D0F06; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+    <span style="font-size: 13px; color: #B08D5F;">© 2026 Rand Sweets — جميع الحقوق محفوظة</span>
+    <nav style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;">
+      <a href="index.html" style="font-size: 13px; color: #E3C98B;">الرئيسية</a>
+      <a href="menu.html" style="font-size: 13px; color: #E3C98B;">المنيو</a>
+      <a href="catering.html" style="font-size: 13px; color: #E3C98B;">المناسبات والطلبات الكبيرة</a>
+      <a href="branches.html" style="font-size: 13px; color: #E3C98B;">فروعنا</a>
+    </nav>
+    <span class="disp" style="font-size: 18px; color: #E3C98B;">رند</span>
+  </footer>
+
+</div>
+</body>
+</html>

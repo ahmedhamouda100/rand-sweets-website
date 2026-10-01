@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رند | Rand Sweets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap">
+<style>
+  body { margin: 0; font-family: 'Tajawal', sans-serif; background: #F8EEDC; color: #3B2414; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { opacity: 0.8; }
+  .ck { font-family: 'Tajawal', sans-serif; font-size: 13px; letter-spacing: 3px; font-weight: 700; color: #C8972E; text-transform: uppercase; }
+  .disp { font-family: 'El Messiri', serif; }
+  video { background: #2A160B; }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden;">
+
+  <!-- HEADER -->
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 48px; background: #FBF3E3; box-shadow: 0 2px 14px rgba(59,36,20,0.08);">
+    <img src="assets/logo.png" alt="رند" style="height: 44px; width: auto;">
+    <nav style="display: flex; align-items: center; gap: 34px;">
+      <a href="index.html" style="color: #3B2414; font-size: 15px; font-weight: 700;">الرئيسية</a>
+      <a href="menu.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">المنيو</a>
+      <a href="#story" style="color: #3B2414; font-size: 15px; font-weight: 500;">قصتنا</a>
+      <a href="branches.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">فروعنا</a>
+      <a href="https://wa.me/966570702728" style="display: flex; align-items: center; gap: 8px; background: #C8972E; color: #2A160B; padding: 10px 22px; border-radius: 4px; font-size: 14px; font-weight: 700;">
+        اطلب الآن
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO (video) -->
+  <section style="position: relative; min-height: 640px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 24px; overflow: hidden;">
+    <video autoplay muted loop playsinline poster="assets/hero-kunafa.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(20,10,5,0.40) 0%, rgba(20,10,5,0.55) 55%, rgba(20,10,5,0.85) 100%);"></div>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 28px; max-width: 760px;">
+      <img src="assets/logo.png" alt="رند" style="height: 86px; width: auto; filter: brightness(0) invert(1); opacity: 0.97;">
+      <h1 class="disp" style="margin: 0; font-size: 54px; line-height: 1.35; color: #FDF8EE; font-weight: 700;">طعم أصيل… بلمسة فاخرة</h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.8; color: #F1E4CC; max-width: 560px;">كنافة وحلويات شرقية فاخرة، تُحضَّر يوميًا بأجود المكونات لتصل إليكم طازجة بكل قطعة.</p>
+      <div style="display: flex; gap: 18px; margin-top: 8px; flex-wrap: wrap; justify-content: center;">
+        <a href="https://wa.me/966570702728" style="background: #C8972E; color: #2A160B; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700;">اطلب عبر واتساب</a>
+        <a href="menu.html" style="border: 1.5px solid #F1E4CC; color: #FDF8EE; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700;">تصفح المنيو الكامل</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" style="padding: 110px 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 64px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 22px; align-items: flex-start;">
+      <span class="ck">OUR STORY</span>
+      <h2 class="disp" style="margin: 0; font-size: 42px; color: #3B2414; font-weight: 700;">قصتنا</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 2; color: #5A3B26;">
+        في قلب المملكة، وُلدت "رند" من شغف عائلي بصناعة الحلويات الشرقية الأصيلة. استلهمنا الاسم من شجرة الرند العريقة في تراثنا العربي، رمزًا للعراقة والنقاء.
+      </p>
+      <p style="margin: 0; font-size: 17px; line-height: 2; color: #5A3B26;">
+        نحرص على تحضير كل قطعة كنافة وبسبوسة يدويًا، يوميًا، بأجود أنواع السمن والقشطة الطازجة والمكسرات — لنقدّم لكم حلويات بطعم أصيل، ولمسة تليق بأرقى الموائد.
+      </p>
+    </div>
+    <div style="border-radius: 6px; overflow: hidden; box-shadow: 0 24px 60px rgba(59,36,20,0.18);">
+      <img src="assets/balah-el-sham.jpg" alt="بلح الشام رند" style="width: 100%; height: 440px; object-fit: cover; display: block;">
+    </div>
+  </section>
+
+  <!-- SIGNATURE CREATIONS -->
+  <section id="creations" style="padding: 100px 48px 90px; background: #F1E4CC;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; margin-bottom: 64px;">
+      <span class="ck">SIGNATURE CREATIONS</span>
+      <h2 class="disp" style="margin: 0; font-size: 42px; color: #3B2414; font-weight: 700;">أصنافنا المميزة</h2>
+      <p style="margin: 0; font-size: 16px; color: #5A3B26; max-width: 520px; line-height: 1.8;">تشكيلة من الحلويات الشرقية الفاخرة، بنكهات متعددة تُرضي كل الأذواق.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 32px;">
+
+      <article style="background: #FFFDF8; border-radius: 8px; overflow: hidden; box-shadow: 0 14px 34px rgba(59,36,20,0.12);">
+        <img src="assets/kunafa-plain.jpg" alt="كنافة سيجنتشر" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+        <div style="padding: 26px 24px; display: flex; flex-direction: column; gap: 10px;">
+          <h3 class="disp" style="margin: 0; font-size: 24px; color: #3B2414;">كنافة سيجنتشر</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32;">كنافتنا الأصلية بعجينة ذهبية مقرمشة من الخارج وطرية من الداخل، بنكهة السمن البلدي الأصيل كما تحبها الأجيال.</p>
+        </div>
+      </article>
+
+      <article style="background: #FFFDF8; border-radius: 8px; overflow: hidden; box-shadow: 0 14px 34px rgba(59,36,20,0.12);">
+        <img src="assets/hero-kunafa.jpg" alt="كنافة مكس" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+        <div style="padding: 26px 24px; display: flex; flex-direction: column; gap: 10px;">
+          <h3 class="disp" style="margin: 0; font-size: 24px; color: #3B2414;">كنافة مكس</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32;">كنافة مقرمشة مزيّنة بتعرّجات من صوصات النوتيلا والبستاشيو واللوتس معًا — لمن يريد تذوق كل النكهات في قطعة واحدة.</p>
+        </div>
+      </article>
+
+      <article style="background: #FFFDF8; border-radius: 8px; overflow: hidden; box-shadow: 0 14px 34px rgba(59,36,20,0.12);">
+        <img src="assets/basbousa.jpg" alt="بسبوسة قشطة" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+        <div style="padding: 26px 24px; display: flex; flex-direction: column; gap: 10px;">
+          <h3 class="disp" style="margin: 0; font-size: 24px; color: #3B2414;">بسبوسة قشطة</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32;">بسبوسة ناعمة القوام محشوة بالقشطة الطازجة، متوازنة الحلاوة ومثالية مع فنجان قهوة.</p>
+        </div>
+      </article>
+
+      <article style="background: #FFFDF8; border-radius: 8px; overflow: hidden; box-shadow: 0 14px 34px rgba(59,36,20,0.12);">
+        <img src="assets/khaliyet-nahl.jpg" alt="خلية نحل بيكان" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+        <div style="padding: 26px 24px; display: flex; flex-direction: column; gap: 10px;">
+          <h3 class="disp" style="margin: 0; font-size: 24px; color: #3B2414;">خلية نحل بيكان</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32;">طبقات هشة ذهبية محشوة بالبيكان المحمّص، تذوب في الفم مع أول قضمة.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 56px;">
+      <a href="menu.html" style="border: 1.5px solid #3B2414; color: #3B2414; padding: 15px 38px; border-radius: 4px; font-size: 15px; font-weight: 700;">عرض المنيو الكامل</a>
+    </div>
+  </section>
+
+  <!-- CINEMATIC SHOWCASE -->
+  <section style="padding: 100px 48px; display: flex; flex-direction: column; gap: 48px; align-items: center;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <span class="ck">FROM OUR KITCHEN</span>
+      <h2 class="disp" style="margin: 0; font-size: 36px; color: #3B2414; font-weight: 700;">لحظات من مطبخنا</h2>
+      <p style="margin: 0; font-size: 15px; color: #6B4A32; max-width: 480px; line-height: 1.8;">اضغطوا تشغيل لمشاهدة لمحة من تحضيرنا اليدوي اليومي.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 28px; width: 100%; max-width: 1100px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 18px 40px rgba(59,36,20,0.16);">
+          <video controls autoplay muted loop playsinline poster="assets/kunafa-plain.jpg" style="width: 100%; height: 360px; object-fit: cover; display: block;">
+            <source src="assets/showcase-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span style="font-size: 14px; color: #6B4A32; text-align: center;">تحضير يدوي يوميًا</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 18px 40px rgba(59,36,20,0.16);">
+          <video controls autoplay muted loop playsinline style="width: 100%; height: 360px; object-fit: cover; display: block;">
+            <source src="assets/showcase-2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span style="font-size: 14px; color: #6B4A32; text-align: center;">تشكيلة الكنافة الفاخرة</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATERING TEASER -->
+  <section style="padding: 0 48px 100px;">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; background: #F1E4CC; border-radius: 10px; padding: 48px 56px;">
+      <div style="display: flex; flex-direction: column; gap: 10px; max-width: 520px;">
+        <span class="ck">CATERING & OCCASIONS</span>
+        <h3 class="disp" style="margin: 0; font-size: 26px; color: #3B2414; font-weight: 700;">تجمعات ومناسبات؟ عندنا الصواني الكبيرة</h3>
+        <p style="margin: 0; font-size: 15px; color: #5A3B26; line-height: 1.8;">من الأحجام العائلية إلى صواني الحلويات للمناسبات والتجمعات.</p>
+      </div>
+      <a href="catering.html" style="background: #3B2414; color: #FDF8EE; padding: 15px 34px; border-radius: 4px; font-size: 15px; font-weight: 700; white-space: nowrap;">تفاصيل المناسبات</a>
+    </div>
+  </section>
+
+  <!-- WHY RAND -->
+  <section style="padding: 60px 48px 110px; display: flex; flex-direction: column; align-items: center; gap: 56px;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <span class="ck">WHY RAND</span>
+      <h2 class="disp" style="margin: 0; font-size: 42px; color: #3B2414; font-weight: 700;">لماذا رند؟</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 48px; max-width: 1100px; width: 100%;">
+
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8972E" stroke-width="1.6"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4L12 2z"/></svg>
+        <h3 style="margin: 0; font-size: 19px; color: #3B2414; font-weight: 700;">مكونات فاخرة</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32; max-width: 260px;">نختار أجود أنواع السمن والمكسرات والقشطة الطازجة في كل وصفة.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8972E" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 3.2"/></svg>
+        <h3 style="margin: 0; font-size: 19px; color: #3B2414; font-weight: 700;">تحضير يومي طازج</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32; max-width: 260px;">كل قطعة تُحضَّر وتُقلى يوميًا لضمان الطزاجة والقرمشة المثالية.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8972E" stroke-width="1.6"><path d="M4 19V7a2 2 0 0 1 2-2h8l6 6v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 5v5h5"/></svg>
+        <h3 style="margin: 0; font-size: 19px; color: #3B2414; font-weight: 700;">نكهات أصيلة بروح عصرية</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.8; color: #6B4A32; max-width: 260px;">وصفات الكنافة والبسبوسة التقليدية، بتقديم أنيق يليق بالمناسبات الفاخرة.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VISIT / ORDER -->
+  <section id="visit" style="padding: 110px 48px; background: #2A160B; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center;">
+    <img src="assets/logo.png" alt="رند" style="height: 54px; width: auto; filter: brightness(0) invert(1); opacity: 0.95;">
+    <h2 class="disp" style="margin: 0; font-size: 38px; color: #FDF8EE; font-weight: 700;">تذوق رند اليوم</h2>
+    <p style="margin: 0; font-size: 16px; color: #E3C98B; max-width: 440px; line-height: 1.8;">اطلبوا عبر واتساب أو زوروا موقعنا — وندعم الدفع عبر مدى وآبل باي.</p>
+    <div style="display: flex; gap: 18px; margin-top: 8px; flex-wrap: wrap; justify-content: center;">
+      <a href="https://wa.me/966570702728" style="background: #C8972E; color: #2A160B; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700;">اطلب عبر واتساب</a>
+      <a href="https://maps.app.goo.gl/prhUtGzFWbk5WPQB7?g_st=ic" style="border: 1.5px solid #E3C98B; color: #FDF8EE; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700;">موقعنا على الخريطة</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding: 36px 48px; background: #1D0F06; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+    <span style="font-size: 13px; color: #B08D5F;">© 2026 Rand Sweets — جميع الحقوق محفوظة</span>
+    <nav style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;">
+      <a href="index.html" style="font-size: 13px; color: #E3C98B;">الرئيسية</a>
+      <a href="menu.html" style="font-size: 13px; color: #E3C98B;">المنيو</a>
+      <a href="catering.html" style="font-size: 13px; color: #E3C98B;">المناسبات والطلبات الكبيرة</a>
+      <a href="branches.html" style="font-size: 13px; color: #E3C98B;">فروعنا</a>
+    </nav>
+    <span class="disp" style="font-size: 18px; color: #E3C98B;">رند</span>
+  </footer>
+
+</div>
+</body>
+</html>

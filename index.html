@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
 <title>رند | Rand Sweets</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap">
 <style>
@@ -20,9 +21,9 @@
   @media (max-width: 860px) {
     .nav-burger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 60; background: none; border: none; padding: 0; }
     .nav-burger span { display: block; width: 24px; height: 2px; background: #3B2414; border-radius: 2px; }
-    .site-nav { position: fixed; top: 0; right: -85vw; height: 100vh; width: min(78vw, 320px); background: #FBF3E3; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; padding: 96px 32px 32px !important; gap: 26px !important; box-shadow: -10px 0 40px rgba(59,36,20,0.18); transition: right 0.3s ease; z-index: 55; }
-    .nav-toggle:checked ~ .site-nav { right: 0; }
-    .nav-overlay { position: fixed; inset: 0; background: rgba(20,10,5,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 54; }
+    .site-nav { position: fixed; top: 0; right: 0; height: 100vh; width: min(78vw, 320px); background: #FBF3E3 !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; padding: 96px 32px 32px !important; gap: 26px !important; box-shadow: -10px 0 40px rgba(59,36,20,0.18); transform: translateX(100%); transition: transform 0.3s ease; z-index: 55; }
+    .nav-toggle:checked ~ .site-nav { transform: translateX(0); }
+    .nav-overlay { display: block; position: fixed; inset: 0; background: rgba(20,10,5,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 54; }
     .nav-toggle:checked ~ .nav-overlay { opacity: 1; pointer-events: auto; }
     .site-nav a { font-size: 17px !important; }
     .site-nav a[href*="wa.me"] { width: 100%; justify-content: center; }

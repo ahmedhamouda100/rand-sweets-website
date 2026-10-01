@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>المناسبات والطلبات الكبيرة | رند</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap">
 <style>
@@ -13,6 +14,27 @@
   .tray-card { background: #FFFDF8; border-radius: 10px; padding: 26px 24px; box-shadow: 0 10px 26px rgba(59,36,20,0.1); display: flex; flex-direction: column; gap: 8px; }
   .tray-card h3 { margin: 0; font-size: 18px; color: #3B2414; font-weight: 700; }
   .tray-card p { margin: 0; font-size: 14px; color: #6B4A32; line-height: 1.7; }
+
+  /* MOBILE NAV */
+  .nav-toggle { display: none; }
+  .nav-burger { display: none; }
+  .nav-overlay { display: none; }
+  @media (max-width: 860px) {
+    .nav-burger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 60; background: none; border: none; padding: 0; }
+    .nav-burger span { display: block; width: 24px; height: 2px; background: #3B2414; border-radius: 2px; }
+    .site-nav { position: fixed; top: 0; right: -85vw; height: 100vh; width: min(78vw, 320px); background: #FBF3E3; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; padding: 96px 32px 32px !important; gap: 26px !important; box-shadow: -10px 0 40px rgba(59,36,20,0.18); transition: right 0.3s ease; z-index: 55; }
+    .nav-toggle:checked ~ .site-nav { right: 0; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(20,10,5,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 54; }
+    .nav-toggle:checked ~ .nav-overlay { opacity: 1; pointer-events: auto; }
+    .site-nav a { font-size: 17px !important; }
+    .site-nav a[href*="wa.me"] { width: 100%; justify-content: center; }
+  }
+  /* FLOATING QUICK ACTIONS - mobile */
+  @media (max-width: 480px) {
+    .fqa { bottom: 16px !important; left: 16px !important; gap: 10px !important; }
+    .fqa a { width: 44px !important; height: 44px !important; }
+    .fqa svg { width: 20px !important; height: 20px !important; }
+  }
 </style>
 </head>
 <body>
@@ -20,7 +42,7 @@
 <div style="width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden;">
 
   <!-- FLOATING QUICK ACTIONS -->
-  <div style="position: fixed; bottom: 24px; left: 24px; z-index: 200; display: flex; flex-direction: column; gap: 12px;">
+  <div class="fqa" style="position: fixed; bottom: 24px; left: 24px; z-index: 200; display: flex; flex-direction: column; gap: 12px;">
     <a href="https://maps.app.goo.gl/prhUtGzFWbk5WPQB7?g_st=ic" target="_blank" rel="noopener" title="الموقع على الخريطة" style="width: 52px; height: 52px; border-radius: 50%; background: #2A160B; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(42,22,11,0.35);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F1E4CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
     </a>
@@ -33,11 +55,14 @@
   </div>
 
   <!-- HEADER -->
-  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 48px; background: #FBF3E3; box-shadow: 0 2px 14px rgba(59,36,20,0.08);">
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px clamp(16px, 5vw, 48px); background: #FBF3E3; box-shadow: 0 2px 14px rgba(59,36,20,0.08);">
     <img src="assets/logo.png" alt="رند" style="height: 44px; width: auto;">
-    <nav style="display: flex; align-items: center; gap: 34px;">
-      <a href="index.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">الرئيسية</a>
-      <a href="menu.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">المنيو</a>
+    <input type="checkbox" id="navToggle" class="nav-toggle">
+    <label for="navToggle" class="nav-overlay"></label>
+    <label for="navToggle" class="nav-burger" aria-label="فتح القائمة"><span></span><span></span><span></span></label>
+    <nav class="site-nav" style="display: flرئيسية</a>
+      <a href="menu.html" style="color: #3B2414; font-size: 15px; font-weight: 700;">المنيو</a>
+      <a href="index.html#story" style="color: #3B2414; font-size: 15px; font-weight: 500;">قصتنا</a500;">المنيو</a>
       <a href="index.html#story" style="color: #3B2414; font-size: 15px; font-weight: 500;">قصتنا</a>
       <a href="branches.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">فروعنا</a>
       <a href="https://wa.me/966570702728" style="display: flex; align-items: center; gap: 8px; background: #C8972E; color: #2A160B; padding: 10px 22px; border-radius: 4px; font-size: 14px; font-weight: 700;">
@@ -47,22 +72,22 @@
   </header>
 
   <!-- HERO -->
-  <section style="position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 24px; overflow: hidden;">
+  <section style="position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding: clamp(64px, 14vw, 120px) clamp(18px, 5vw, 24px); overflow: hidden;">
     <div style="position: absolute; inset: 0; background-image: linear-gradient(180deg, rgba(20,10,5,0.45) 0%, rgba(20,10,5,0.6) 60%, rgba(20,10,5,0.88) 100%), url('assets/khaliyet-nahl.jpg'); background-size: cover; background-position: center;"></div>
     <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 24px; max-width: 680px;">
       <span class="ck" style="color: #E3C98B;">CATERING &amp; OCCASIONS</span>
-      <h1 class="disp" style="margin: 0; font-size: 46px; line-height: 1.35; color: #FDF8EE; font-weight: 700;">المناسبات والطلبات الكبيرة</h1>
+      <h1 class="disp" style="margin: 0; font-size: clamp(28px, 6.3vw, 46px); line-height: 1.35; color: #FDF8EE; font-weight: 700;">المناسبات والطلبات الكبيرة</h1>
       <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #F1E4CC; max-width: 540px;">من الصواني الكبيرة إلى احتفالات العائلة — رند تحضّر مناسبتكم بلمسة فاخرة.</p>
       <a href="https://wa.me/966570702728?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B7%D9%84%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D8%B5%D9%88%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1%D8%A9" style="background: #C8972E; color: #2A160B; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700; margin-top: 8px;">استفسر عبر واتساب</a>
     </div>
   </section>
 
   <!-- LARGE FORMATS -->
-  <section style="padding: 100px 48px;">
+  <section style="padding: clamp(56px, 10vw, 100px) clamp(20px, 5vw, 48px);">
     <div style="max-width: 1100px; margin: 0 auto;">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; margin-bottom: 56px;">
         <span class="ck">LARGE FORMATS</span>
-        <h2 class="disp" style="margin: 0; font-size: 36px; color: #3B2414; font-weight: 700;">الأحجام العائلية والصواني الكبيرة</h2>
+        <h2 class="disp" style="margin: 0; font-size: clamp(24px, 5vw, 36px); color: #3B2414; font-weight: 700;">الأحجام العائلية والصواني الكبيرة</h2>
         <p style="margin: 0; font-size: 15px; color: #5A3B26; max-width: 540px; line-height: 1.8;">أصنافنا المفضلة متوفرة بأحجام أكبر تناسب التجمعات، بلا حاجة لتوزيع الطلب على عدة قطع.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 20px;">
@@ -87,11 +112,11 @@
   </section>
 
   <!-- OCCASIONS -->
-  <section style="padding: 0 48px 100px;">
+  <section style="padding: 0 clamp(20px, 5vw, 48px) clamp(56px, 10vw, 100px);">
     <div style="max-width: 1100px; margin: 0 auto;">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; margin-bottom: 48px;">
         <span class="ck">PERFECT FOR</span>
-        <h2 class="disp" style="margin: 0; font-size: 36px; color: #3B2414; font-weight: 700;">مثالية لـ</h2>
+        <h2 class="disp" style="margin: 0; font-size: clamp(24px, 5vw, 36px); color: #3B2414; font-weight: 700;">مثالية لـ</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px;">
         <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
@@ -115,11 +140,11 @@
   </section>
 
   <!-- HOW TO ORDER -->
-  <section style="padding: 100px 48px; background: #F1E4CC;">
+  <section style="padding: clamp(56px, 10vw, 100px) clamp(20px, 5vw, 48px); background: #F1E4CC;">
     <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 48px;">
       <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
         <span class="ck">HOW TO ORDER</span>
-        <h2 class="disp" style="margin: 0; font-size: 36px; color: #3B2414; font-weight: 700;">كيف تطلب</h2>
+        <h2 class="disp" style="margin: 0; font-size: clamp(24px, 5vw, 36px); color: #3B2414; font-weight: 700;">كيف تطلب</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 36px; width: 100%;">
         <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
@@ -140,7 +165,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer style="padding: 36px 48px; background: #1D0F06; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+  <footer style="padding: clamp(28px, 6vw, 36px) clamp(20px, 5vw, 48px); background: #1D0F06; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
     <span style="font-size: 13px; color: #B08D5F;">© 2026 Rand Sweets — جميع الحقوق محفوظة</span>
     <nav style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;">
       <a href="index.html" style="font-size: 13px; color: #E3C98B;">الرئيسية</a>
@@ -152,7 +177,7 @@
   </footer>
 
   <!-- SOCIAL BAR -->
-  <div style="background: #1D0F06; padding: 18px 48px 28px; display: flex; align-items: center; justify-content: center; gap: 22px; border-top: 1px solid rgba(227,201,139,0.12);">
+  <div style="background: #1D0F06; padding: clamp(14px, 4vw, 18px) clamp(20px, 5vw, 48px) clamp(20px, 5vw, 28px); display: flex; align-items: center; justify-content: center; gap: 22px; border-top: 1px solid rgba(227,201,139,0.12);">
     <a href="https://www.facebook.com/profile.php?id=61594863965941" target="_blank" rel="noopener" title="فيسبوك" style="display: flex;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3C98B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
     </a>

@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>المنيو | رند</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap">
 <style>
@@ -16,6 +17,27 @@
   .item-card { background: #FFFDF8; border-radius: 10px; padding: 20px 22px; box-shadow: 0 6px 18px rgba(59,36,20,0.08); display: flex; flex-direction: column; gap: 6px; }
   .item-card h3 { margin: 0; font-size: 16.5px; color: #3B2414; font-weight: 700; }
   .item-card p { margin: 0; font-size: 13.5px; color: #6B4A32; line-height: 1.7; }
+
+  /* MOBILE NAV */
+  .nav-toggle { display: none; }
+  .nav-burger { display: none; }
+  .nav-overlay { display: none; }
+  @media (max-width: 860px) {
+    .nav-burger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; cursor: pointer; z-index: 60; background: none; border: none; padding: 0; }
+    .nav-burger span { display: block; width: 24px; height: 2px; background: #3B2414; border-radius: 2px; }
+    .site-nav { position: fixed; top: 0; right: -85vw; height: 100vh; width: min(78vw, 320px); background: #FBF3E3; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; padding: 96px 32px 32px !important; gap: 26px !important; box-shadow: -10px 0 40px rgba(59,36,20,0.18); transition: right 0.3s ease; z-index: 55; }
+    .nav-toggle:checked ~ .site-nav { right: 0; }
+    .nav-overlay { position: fixed; inset: 0; background: rgba(20,10,5,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 54; }
+    .nav-toggle:checked ~ .nav-overlay { opacity: 1; pointer-events: auto; }
+    .site-nav a { font-size: 17px !important; }
+    .site-nav a[href*="wa.me"] { width: 100%; justify-content: center; }
+  }
+  /* FLOATING QUICK ACTIONS - mobile */
+  @media (max-width: 480px) {
+    .fqa { bottom: 16px !important; left: 16px !important; gap: 10px !important; }
+    .fqa a { width: 44px !important; height: 44px !important; }
+    .fqa svg { width: 20px !important; height: 20px !important; }
+  }
 </style>
 </head>
 <body>
@@ -23,7 +45,7 @@
 <div style="width: 100%; max-width: 1440px; margin: 0 auto; overflow-x: hidden;">
 
   <!-- FLOATING QUICK ACTIONS -->
-  <div style="position: fixed; bottom: 24px; left: 24px; z-index: 200; display: flex; flex-direction: column; gap: 12px;">
+  <div class="fqa" style="position: fixed; bottom: 24px; left: 24px; z-index: 200; display: flex; flex-direction: column; gap: 12px;">
     <a href="https://maps.app.goo.gl/prhUtGzFWbk5WPQB7?g_st=ic" target="_blank" rel="noopener" title="الموقع على الخريطة" style="width: 52px; height: 52px; border-radius: 50%; background: #2A160B; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(42,22,11,0.35);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F1E4CC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
     </a>
@@ -36,9 +58,12 @@
   </div>
 
   <!-- HEADER -->
-  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px 48px; background: #FBF3E3; box-shadow: 0 2px 14px rgba(59,36,20,0.08);">
+  <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 14px clamp(16px, 5vw, 48px); background: #FBF3E3; box-shadow: 0 2px 14px rgba(59,36,20,0.08);">
     <img src="assets/logo.png" alt="رند" style="height: 44px; width: auto;">
-    <nav style="display: flex; align-items: center; gap: 34px;">
+    <input type="checkbox" id="navToggle" class="nav-toggle">
+    <label for="navToggle" class="nav-overlay"></label>
+    <label for="navToggle" class="nav-burger" aria-label="فتح القائمة"><span></span><span></span><span></span></label>
+    <nav class="site-nav" style="display: flex; align-items: center; gap: 34px;">
       <a href="index.html" style="color: #3B2414; font-size: 15px; font-weight: 500;">الرئيسية</a>
       <a href="menu.html" style="color: #3B2414; font-size: 15px; font-weight: 700;">المنيو</a>
       <a href="index.html#story" style="color: #3B2414; font-size: 15px; font-weight: 500;">قصتنا</a>
@@ -50,21 +75,21 @@
   </header>
 
   <!-- PAGE TITLE -->
-  <section style="padding: 90px 48px 64px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+  <section style="padding: clamp(56px, 10vw, 90px) clamp(20px, 5vw, 48px) clamp(40px, 8vw, 64px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
     <span class="ck">OUR MENU</span>
-    <h1 class="disp" style="margin: 0; font-size: 48px; color: #3B2414; font-weight: 700;">المنيو</h1>
+    <h1 class="disp" style="margin: 0; font-size: clamp(30px, 6.5vw, 48px); color: #3B2414; font-weight: 700;">المنيو</h1>
     <p style="margin: 0; font-size: 16px; color: #5A3B26; max-width: 560px; line-height: 1.8;">تشكيلتنا الكاملة من الكنافة والحلويات الشرقية. للأسعار وتفاصيل الطلب، تواصلوا معنا مباشرة عبر واتساب.</p>
   </section>
 
   <!-- CATEGORIES -->
-  <section style="padding: 0 48px 60px;">
+  <section style="padding: 0 clamp(20px, 5vw, 48px) clamp(40px, 8vw, 60px);">
     <div style="max-width: 980px; margin: 0 auto; display: flex; flex-direction: column;">
 
       <!-- 1 -->
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
           <img class="catimg" src="assets/kunafa-plain.jpg" alt="كنافة سيجنتشر وأسبيشل">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كنافة سيجنتشر وأسبيشل</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">كنافة سيجنتشر وأسبيشل</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>سيجنتشر</h3><p>الوصفة الأصلية المقرمشة بنكهة السمن البلدي الأصيل</p></div>
@@ -75,7 +100,7 @@
       <!-- 2 -->
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كنافة أخرى</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">كنافة أخرى</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>كنافة كوب</h3><p>كنافة فردية بتقديم أنيق داخل كوب</p></div>
@@ -88,7 +113,7 @@
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
           <img class="catimg" src="assets/hero-kunafa.jpg" alt="كنافة حشوات">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كنافة حشوات</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">كنافة حشوات</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>قشطة</h3><p>محشوة بالقشطة الطازجة</p></div>
@@ -104,7 +129,7 @@
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
           <img class="catimg" src="assets/khaliyet-nahl.jpg" alt="خلية نحل">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">خلية نحل</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">خلية نحل</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>نستله</h3><p>محشوة بكريمة نستله</p></div>
@@ -117,7 +142,7 @@
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
           <img class="catimg" src="assets/balah-el-sham.jpg" alt="بلح الشام">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">بلح الشام</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">بلح الشام</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>قشطة</h3><p>بحشوة القشطة الطازجة</p></div>
@@ -132,7 +157,7 @@
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
           <img class="catimg" src="assets/basbousa.jpg" alt="بسبوسة">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">بسبوسة</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">بسبوسة</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>قشطة</h3><p>بسبوسة طرية محشوة بالقشطة</p></div>
@@ -149,7 +174,7 @@
       <!-- 7 -->
       <div style="padding: 44px 0; border-bottom: 1px solid #E8D9B8;">
         <div class="catrow">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">بسبوسة يمنية</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">بسبوسة يمنية</h2>
         </div>
         <div class="item-card" style="max-width: 560px;">
           <p>متوفرة بأحجام متعددة تناسب الفرد أو العائلة، بالإضافة إلى صينية كبيرة تكفي للتجمعات والمناسبات.</p>
@@ -160,7 +185,7 @@
       <!-- 8 -->
       <div style="padding: 44px 0;">
         <div class="catrow">
-          <h2 class="disp" style="margin: 0; font-size: 28px; color: #3B2414;">كيك</h2>
+          <h2 class="disp" style="margin: 0; font-size: clamp(20px, 4vw, 28px); color: #3B2414;">كيك</h2>
         </div>
         <div class="item-grid">
           <div class="item-card"><h3>بنانا بريد</h3><p>كيكة الموز الغنية والطرية، بنكهة منزلية أصيلة</p></div>
@@ -172,14 +197,14 @@
   </section>
 
   <!-- ORDER NOTE -->
-  <section style="padding: 80px 48px; background: #2A160B; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center;">
-    <h2 class="disp" style="margin: 0; font-size: 32px; color: #FDF8EE; font-weight: 700;">جاهز للطلب؟</h2>
+  <section style="padding: clamp(48px, 9vw, 80px) clamp(20px, 5vw, 48px); background: #2A160B; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center;">
+    <h2 class="disp" style="margin: 0; font-size: clamp(22px, 4.5vw, 32px); color: #FDF8EE; font-weight: 700;">جاهز للطلب؟</h2>
     <p style="margin: 0; font-size: 15px; color: #E3C98B; max-width: 440px; line-height: 1.8;">تواصلوا معنا مباشرة عبر واتساب للأسعار وتفاصيل الطلب والتوصيل.</p>
     <a href="https://wa.me/966570702728" style="background: #C8972E; color: #2A160B; padding: 16px 36px; border-radius: 4px; font-size: 16px; font-weight: 700;">اطلب عبر واتساب</a>
   </section>
 
   <!-- FOOTER -->
-  <footer style="padding: 36px 48px; background: #1D0F06; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+  <footer style="padding: clamp(28px, 6vw, 36px) clamp(20px, 5vw, 48px); background: #1D0F06; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
     <span style="font-size: 13px; color: #B08D5F;">© 2026 Rand Sweets — جميع الحقوق محفوظة</span>
     <nav style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: center;">
       <a href="index.html" style="font-size: 13px; color: #E3C98B;">الرئيسية</a>
@@ -191,7 +216,7 @@
   </footer>
 
   <!-- SOCIAL BAR -->
-  <div style="background: #1D0F06; padding: 18px 48px 28px; display: flex; align-items: center; justify-content: center; gap: 22px; border-top: 1px solid rgba(227,201,139,0.12);">
+  <div style="background: #1D0F06; padding: clamp(14px, 4vw, 18px) clamp(20px, 5vw, 48px) clamp(20px, 5vw, 28px); display: flex; align-items: center; justify-content: center; gap: 22px; border-top: 1px solid rgba(227,201,139,0.12);">
     <a href="https://www.facebook.com/profile.php?id=61594863965941" target="_blank" rel="noopener" title="فيسبوك" style="display: flex;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3C98B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
     </a>
